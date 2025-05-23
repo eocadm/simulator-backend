@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "simulator-backend",
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "868a6737-a243-4215-8c5a-f81c5e22fb53",
+      "database_name": "simulator-d1"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

@@ -57,3 +57,9 @@ A live public deployment of this template is available at [https://d1-template.t
    ```bash
    npx wrangler deploy
    ```
+
+## 실행 및 쿼리
+
+로컬 테이블 생성: npx wrangler d1 execute simulator-d1 --local --file ./schemas/asset.sql;
+원격 테이블 생성: npx wrangler d1 execute simulator-d1 --remote --file ./schemas/asset.sql;
+npx wrangler d1 execute simulator-d1 --local --command "SELECT \* from user"

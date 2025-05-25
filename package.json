@@ -20,7 +20,10 @@
   },
   "devDependencies": {
     "typescript": "5.8.3",
-    "wrangler": "4.12.0"
+    "wrangler": "4.12.0",
+    "@cloudflare/workers-types": "^4.20241224.0",
+		"@types/node": "20.8.3",
+		"@types/service-worker-mock": "^2.0.1"
   },
   "scripts": {
     "cf-typegen": "wrangler types",
@@ -29,5 +32,10 @@
     "dev": "wrangler dev",
     "predeploy": "wrangler d1 migrations apply DB --remote",
     "seedLocalD1": "wrangler d1 migrations apply DB --local"
+  },
+  "dependencies": {
+    "chanfana": "^2.8.0",
+    "hono": "^4.7.10",
+    "zod": "^3.25.28"
   }
 }

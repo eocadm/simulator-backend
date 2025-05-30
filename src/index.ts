@@ -23,7 +23,10 @@ const privilegedMethods = ["POST", "PUT", "PATCH", "DELETE", "GET", "OPTIONS"];
 app.use(
   "/api/*",
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: [
+      "https://simulator-backend.eocadm2025.workers.dev/",
+      "http://localhost:4173/",
+    ],
     credentials: true,
   })
 );

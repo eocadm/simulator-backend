@@ -24,17 +24,22 @@ app.use(
   "/api/*",
   cors({
     origin: [
-      "https://simulator-backend.eocadm2025.workers.dev/",
-      "http://localhost:4173/",
+      "https://simulator-backend.eocadm2025.workers.dev",
+      "http://localhost:4173",
     ],
+    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowHeaders: ["Content-Type", "Authorization"],
+    exposeHeaders: ["Content-Length"],
+    maxAge: 600,
     credentials: true,
   })
 );
 
 // app.on(privilegedMethods, "/api/v1/*", async (c, next) => {
 //   // Single valid privileged token
-//   const bearer = bearerAuth({ token: privilegedToken });
-//   return bearer(c, next);
+//   // const bearer = bearerAuth({ token: privilegedToken });
+//   // return bearer(c, next);
+//   return next();
 // });
 
 // Setup OpenAPI registry
